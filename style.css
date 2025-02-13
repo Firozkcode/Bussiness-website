@@ -147,6 +147,108 @@ header {
     align-items: center;
   }
 
+  .dropbtn {
+    /* background-color: #4CAF50; */
+    color: var(--primary-text-color);
+    padding: 16px;
+    width: 160px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background: var(--primary-dark-color);
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-dark-color);
+    min-width: 160px;
+    right: 10px;
+    /* border-radius: 10px; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    /* color: black; */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 18px;
+    color: var(--primary-text-color);
+    font-size: 12px;
+    font-weight: 400;
+    transition: 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+    /* border-radius: 10px; */
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: var(--primary-text-color);
+    color: var(--primary-dark-color);
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .nav-link,
+.dropdown-content:hover ~ .nav-link,
+.dropdown-submenu:hover ~ .nav-link
+ {
+  color: var(--primary-color) !important;
+  background: var(--primary-text-color);
+}
+  
+  /* Dropdown submenu */
+  .dropdown-submenu {
+    position: relative;
+  }
+
+  .dropdown-submenu a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-submenu a ion-icon{
+    position: relative;
+    /* right: -70px; */
+  }
+  
+  /* Submenu content (Hidden by Default) */
+  .dropdown-content-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    /* border-radius: 10px; */
+    background-color: var(--primary-dark-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Show the submenu content on hover */
+  .dropdown-submenu:hover .dropdown-content-submenu {
+    display: block;
+  }
+
   .navbar .fas{
     display: none;
   }
@@ -172,6 +274,9 @@ header {
   }
 
   .navbar .nav-menu .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 18px;
     color: var(--primary-text-color);
     font-size: 12px;
@@ -185,9 +290,8 @@ header {
     color: var(--primary-color);
     background: var(--primary-text-color);
   }
-  .navbar .nav-menu .nav-link a{
-    letter-spacing: 6px;
-  }
+
+  
   .navbar :where(#menu-open-button, #menu-close-button) {
     display: none;
   }
